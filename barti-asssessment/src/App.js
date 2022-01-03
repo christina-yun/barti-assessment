@@ -9,7 +9,6 @@ function App() {
         <Search />
       </div>
       <div className="container">
-        
         <Switch>
           <Route path="/results">
             <ResultList />
