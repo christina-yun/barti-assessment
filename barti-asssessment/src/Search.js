@@ -14,7 +14,7 @@ const Search = (props) => {
     props.allTheTerms(search);
   };
 
-  //   TODO Create a useEffect that displays nothing instead of No results the first time the page renders
+  //   TODO Create a useEffect that displays nothing instead of No results the first time the page renders -- could utilize a library like react-paginate
 
   return (
     <div className="search">
