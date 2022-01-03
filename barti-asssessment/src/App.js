@@ -1,10 +1,15 @@
-import Search from './Search';
-import './App.css';
+import Search from "./Search";
+import { Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Search />
+      <div className="search">
+        <Search />
+      </div>
+      <div className='container'>
+        
+      </div>
     </div>
   );
 }

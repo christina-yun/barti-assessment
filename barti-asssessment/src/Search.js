@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {connect} from 'react-redux';
+import { allTheTerms } from "./actions";
 
 const Search = (props) => {
     const [search, setSearch] = useState('');
@@ -9,6 +11,8 @@ const Search = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        props.allTheTerms(search)
+        console.log('click')
     }
   return (
     <div className="search">
@@ -24,4 +28,12 @@ const Search = (props) => {
   );
 };
 
-export default Search;
+const mapStateToProps = (state) => {
+    return ({
+        search:state.search,
+        isFetching: state.isFetching,
+        error: state.error
+    })
+}
+
+export default connect(mapStateToProps, { allTheTerms }) (Search);

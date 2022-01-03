@@ -17,7 +17,7 @@ export const reducer = (state = initialState, action) => {
         case(FETCH_SUCCESS):
             return({
                 ...state,
-                drinks: action.payload,
+                search: action.payload,
                 isFetching: false,
                 error: ''
             });
