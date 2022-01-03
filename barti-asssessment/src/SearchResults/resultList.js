@@ -10,7 +10,7 @@ const ResultList = (props) => {
         <h3>No results</h3>
       ) : (
         results.map((result) => {
-          return <Result key={result.result.id} result={result} />;
+          return <Result key={result.id} result={result} />;
         })
       )}
     </div>
