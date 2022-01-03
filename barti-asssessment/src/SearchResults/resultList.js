@@ -1,17 +1,17 @@
-import Reach from 'react';
-import result from './result'
+import React from 'react';
+import Result from './Result'
 import {connect} from 'react-redux';
 
 const ResultList = (props) => {
     const results = props.results;
-
     return (
         <div className='resultList'>
-            {results === null||undefined ? 
+            {results.length === 0 ? 
                 <h3>No results</h3> : 
-            results.map(drink => {
-                return <Result key={result.id} result={result} />
+            results.map(result => {
+                return <Result key={result.result.id} result={result} />
             })}
+            
         </div>
         
     )

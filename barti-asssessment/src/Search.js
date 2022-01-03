@@ -12,15 +12,13 @@ const Search = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         props.allTheTerms(search)
-        console.log('click')
+
     }
   return (
     <div className="search">
+        {/* TODO Create a toggle button for a separate form to seach by first or last name */}
       <form>
-        <label>First Name</label>
-        <input onChange = {handleChange} />
-        <p></p>
-        <label>Last Name</label>
+        <label>Search by Name</label>
         <input onChange = {handleChange} />
         <button className='submit' onClick={handleSubmit}> Search </button>
       </form>

@@ -2,9 +2,12 @@ import Reach from 'react';
 import { connect } from 'react-redux';
 
 const Result = (props) => {
-
     return (
-        <h1> Testing</h1>
+        <div>
+            <p> Name: {props.result.firstName} {props.result.lastName}</p>
+        </div>
+        
+        
     )
 }
 

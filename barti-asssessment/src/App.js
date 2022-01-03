@@ -1,5 +1,6 @@
 import Search from "./Search";
-import { Route, Link } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
+import ResultList from "./SearchResults/ResultList";
 
 function App() {
   return (
@@ -7,8 +8,13 @@ function App() {
       <div className="search">
         <Search />
       </div>
-      <div className='container'>
+      <div className="container">
         
+        <Switch>
+          <Route path="/results">
+            <ResultList />
+          </Route>
+        </Switch>
       </div>
     </div>
   );
